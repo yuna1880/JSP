@@ -31,6 +31,7 @@
 <head>
 <meta charset="UTF-8">
 <title>상세화면</title>
+<link href="/08_GuestBook/css/guestbook.css" rel="stylesheet">
 <script>
 	function update_go(frm) {
 		frm.action = "update.jsp"; //수정작업할 화면 
@@ -44,11 +45,9 @@
 </head>
 <body>
 	<div id="container">
-		<h2> 방명록 : 상세화면 </h2>
+		<h2 class="table-title"> GuestBook </h2>
 		<hr>
-
-		<p><a href="list.jsp">[ 목록으로 이동 ]</a></p>
-		
+		<p><a href="list.jsp"class="link-3"> ★ Back to the List - Click Here!★</a></p>
 		<form method="post">
 		<table>
 		<tbody>

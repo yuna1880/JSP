@@ -27,12 +27,12 @@
 </head>
 <body>
 <div id = "container">
-	<h2 class="table-title">방명록</h2>
+	<h2 class="table-title">GuestBook</h2>
 	<hr>
 	<nav id="nav-3">
-	<p><a href="write.jsp" class="link-3"> ★ 방명록 쓰기 ★</a></p>
+	<p><a href="write.jsp" class="link-3"> ★ Write - Click Here!★</a></p>
 	</nav>
-	<table>
+	<table class="table-fill">
 		<thead>
 			<tr>
 				<th>번호</th>
@@ -53,10 +53,10 @@
 	//3. SQL 실행 결과 화면에 출력
 	if (list.size() > 0) {
 		for (GuestbookVO vo : list) { %>
-		<tr>
+			<tr>
 				<td class="center"><%=vo.getIdx() %></td>
 				<td class="center"><%=vo.getName() %></td>
-				<td class="center"><a href="onelist.jsp?idx=<%=vo.getIdx() %>"><%=vo.getSubject() %></a></td>
+				<td class="center"><a href="onelist.jsp?idx=<%=vo.getIdx() %>" class ="text"> <%=vo.getSubject() %></a></td>
 				<td class="center"><%=vo.getRegdate() %></td>
 			</tr>
 <%			

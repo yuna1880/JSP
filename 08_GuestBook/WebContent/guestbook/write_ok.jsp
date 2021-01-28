@@ -27,7 +27,7 @@
 	// 4. 페이지 이동 처리 (list.jsp) - 정상 입력된 경우
 %>
 <script>
-	alert("정상입력되었습니다. \n 목록페이지로 이동합니다.")
+	alert("정상입력되었습니다. \n 목록페이지로 이동합니다.");
 	location.href="list.jsp";
 </script>
 <%	

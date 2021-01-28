@@ -10,9 +10,9 @@
 <body>
 
 <div id="container">
-	<h2>방명록 입력화면</h2>
+	<h2 class="table-title"> GuestBook - Write</h2>
 	<hr>
-	<p><a href="list.jsp">[목록으로 이동]</a></p>
+	<p><a href="list.jsp"class="link-3"> ★ Back to the List - Click Here!★</a></p>
 	
 	<form action="write_ok.jsp" method="post">
 	<table>
