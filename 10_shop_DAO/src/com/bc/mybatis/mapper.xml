@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="shop">
+	<!-- select 태그 3개 속성 id, resultType, parameterType 
+		id : 사용할 명칭(필수항목), 현재 mapper에서 유일한 명칭 사용
+		resultType : 조회 결과 값을 저장하기 위한 데이터 타입 (데이터 하나에 대한 타입 지정)
+		parameterType : 전달받은 파라미터 데이터 타입 지정(선택적)
+	-->
+	<select id="list" parameterType="string" 
+				resultType="com.bc.mybatis.ShopVO">
+		SELECT NUM, CATEGORY, P_NUM, P_NAME, P_COMPANY, P_PRICE
+				,P_SALEPRICE, P_IMAGE_S, P_IMAGE_L, P_CONTENT
+				, P_DATE 
+			FROM SHOP_T
+		WHERE CATEGORY = #{category}
+	</select>
+	
+	<!-- resultType 값으로 config에서 정의한 ShopVO alias(별칭) 사용! -->
+	<select id="one" parameterType="string" resultType="ShopVO">
+		SELECT NUM, CATEGORY, P_NUM, P_NAME, P_COMPANY, P_PRICE
+				,P_SALEPRICE, P_IMAGE_S, P_IMAGE_L, P_CONTENT
+				, P_DATE 
+			FROM SHOP_T
+		WHERE P_NUM = #{p_num}
+	</select>
+	
+	
+</mapper>
