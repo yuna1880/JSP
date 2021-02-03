@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+<!-- null값이 들어왔을때 처리  -->
+	<settings>
+		<setting name="jdbcTypeForNull" value="NULL"/>
+	</settings>
+ <!-- 타입에 대한 별칭 / 설정 후 매퍼에서 parameterType 으로 설정-->
+ <typeAliases>
+ 	<typeAlias type="com.bc.mybatis.BBSVO" alias="BBSVO"/>
+ </typeAliases>
+
+  <environments default="development">
+    <environment id="development">
+      <transactionManager type="JDBC"/>
+      <dataSource type="POOLED">
+        <property name="driver" value="oracle.jdbc.OracleDriver"/>
+        <property name="url" value="jdbc:oracle:thin:@localhost:1521:xe"/>
+        <property name="username" value="mystudy"/>
+        <property name="password" value="mystudypw"/>
+      </dataSource>
+    </environment>
+  </environments>
+  
+  <mappers>
+    <mapper resource="com/bc/mybatis/mapper.xml"/>
+  </mappers>
+</configuration>
