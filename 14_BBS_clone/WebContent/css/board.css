@@ -1,0 +1,225 @@
+
+	@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100);
+	@import url('https://fonts.googleapis.com/css2?family=Hanalei&display=swap');
+	@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+	
+	caption {
+		font-family: 'Press Start 2P';
+		text-align : center; 
+		font-size: 100px;
+		padding: 30px;
+	   	text-transform:uppercase;
+	}
+	
+	body {
+  	font-family: 'Press Start 2P';
+  	font-size: 10px;
+ 	font-weight: 400;
+  	text-rendering: optimizeLegibility;
+  	background-color : rgb(255, 255, 243);
+	}
+	
+  .table-title {
+   color: pink;
+   font-size: 10px;
+   font-weight: 400;
+   font-style:normal;
+   font-family: 'Press Start 2P';
+   text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+   text-transform:uppercase;
+	}
+	
+	table {
+	  font-family: 'Press Start 2P';
+	  border-radius:3px;
+	  border-collapse: collapse;
+	  border-color: rgb(255, 255, 243);
+	  height: 320px;
+	  margin: auto;
+	  max-width: 600px;
+	  padding:5px;
+	  width: 100%;
+	  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+	  animation: float 5s infinite;
+	}
+	
+	#container {
+		width : 512px;
+		margin : auto;
+		/* border : 1px solid black; */
+	}
+	
+	#container p { text-align : center; }
+	#container table {
+		background: white;
+		border-radius:3px;
+		width:500px;
+		margin: auto;
+		border-collapse : collapse;
+		box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  		animation: float 5s infinite;
+	}
+	
+	th {
+	
+	  color: black;
+	  font-family: 'Press Start 2P';
+	  font-size:15px;
+	  font-weight: 100;
+	  padding:5px;
+	  text-align:center;
+	  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+	  vertical-align:middle;
+	  
+	}
+	
+	th:first-child {
+	  border-top-left-radius:3px;
+	}
+	 
+	th:last-child {
+	  border-top-right-radius:3px;
+	  border-right:none;
+	}
+	
+	
+	
+	tr {
+	  border-top: 1px solid #C1C3D1;
+	  border-bottom-: 1px solid #C1C3D1;
+	  color:#666B85;
+	  font-size:16px;
+	  font-weight:normal;
+	  text-shadow: 0 1px 1px rgba(256, 256, 256, 0.1);
+	}
+	
+	tr:first-child {
+	  border-top:none;
+	}
+	
+	tr:last-child {
+	  border-bottom:none;
+	}
+	 
+	tr:nth-child(odd) td {
+	  background:#EBEBEB;
+	}
+	 
+	tr:nth-child(odd):hover td {
+	  background:rgba(255, 199, 199, 0.918);
+	}
+	
+	tr:last-child td:first-child {
+	  border-bottom-left-radius:3px;
+	}
+	 
+	tr:last-child td:last-child {
+	  border-bottom-right-radius:3px;
+	}
+		
+	tr:hover td {
+	  background:rgba(255, 199, 199, 0.918);
+	  color:#FFFFFF;
+
+	}
+	#container table th, #container table td { border: 1px solid black; }
+	#container table th {
+		background-color: pink;
+	}
+
+	#container .center{ text-align: center; }
+	
+	.link-3 {
+	  transition: 0.4s;
+	  color: #000000;
+	  font-size: 15px;
+	  text-decoration: none;
+	  padding: 0 10px;
+	  margin: 0 10px;
+	}
+	.link-3:hover {
+	  background-color: pink;
+	  color: white;
+	  padding: 10px 10px;
+	}
+	
+	.text {
+		text-decoration: none;
+		color : black;
+	}
+	
+	/* 버튼 */
+	
+	.btn-5 {
+	
+	  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
+	  outline: 1px solid;
+	  outline-color: rgba(255, 255, 255, .5);
+	  outline-offset: 0px;
+	  text-shadow: none;
+	  transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+	  font-family: 'Press Start 2P';
+	} 
+
+	.btn-5:hover {
+	 
+	  box-shadow: inset 0 0 20px rgba(255, 255, 255, .5), 0 0 20px rgba(255, 255, 255, .2);
+	  outline-color: rgba(255, 255, 255, 0);
+	  outline-offset: 15px;
+	  text-shadow: 1px 1px 2px #427388; 
+	  font-family: 'Press Start 2P';
+	}
+	
+	* {
+	  box-sizing: inherit;
+	  transition-property: all;
+	  transition-duration: .6s;
+	  transition-timing-function: ease;
+	}
+	
+	/* 댓글창 */
+	
+	.feedback-input {
+	  color:white;
+	  font-family: 'Press Start 2P';
+	  font-weight:500;
+	  font-size: 18px;
+	  border-radius: 5px;
+	  line-height: 22px;
+	  background-color: transparent;
+	  border:2px solid #CC6666;
+	  transition: all 0.3s;
+	  padding: 13px;
+	  margin-bottom: 15px;
+	  width:100%;
+	  box-sizing: border-box;
+	  outline:0;
+	  max-width:420px; margin:50px auto;
+	}
+
+	.feedback-input:focus { border:2px solid #CC4949; }
+
+	textarea {
+	  height: 150px;
+	  line-height: 150%;
+	  resize:vertical;
+	}
+	[type="submit"] {
+	  font-family: 'Press Start 2P';
+	  width: 100%;
+	  background:#CC6666;
+	  border-radius:5px;
+	  border:0;
+	  cursor:pointer;
+	  color:white;
+	  font-size:24px;
+	  padding-top:10px;
+	  padding-bottom:10px;
+	  transition: all 0.3s;
+	  margin-top:-4px;
+	  font-weight:700;
+	  max-width:420px; margin:50px auto;
+	}
+	[type="submit"]:hover { background:#CC4949; }
+	
+	
