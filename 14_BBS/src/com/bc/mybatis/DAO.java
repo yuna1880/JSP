@@ -41,9 +41,28 @@ public class DAO {
 		return result;
 	}
 	
-	// 조회수 증가처리
+	// 조회수 +1 증가처리
 	public static int updateHit(int b_idx) {
-		
+		SqlSession ss = DBService.getFactory().openSession(true);
+		int result = ss.update("BBS.hit", b_idx);
+		ss.close();
+		return result;
+	}
+	
+	// 게시글 수정 처리
+	public static int update(BBSVO bvo) {
+		SqlSession ss = DBService.getFactory().openSession(true);
+		int result = ss.update("BBS.update", bvo);
+		ss.close();
+		return result;
+	}
+	
+	// 게시글 삭제 처리
+	public static int delete(String b_idx) {
+		SqlSession ss = DBService.getFactory().openSession(true);
+		int result = ss.delete("BBS.delete", b_idx);
+		ss.close();
+		return result;
 	}
 	
 	// 댓글관련 
@@ -57,8 +76,17 @@ public class DAO {
 	
 	// 댓글 입력
 	public static int insertComment(CommVO cvo) {
-		
+		SqlSession ss = DBService.getFactory().openSession(true);
+		int result = ss.update("BBS.c_insert", cvo);
+		ss.close();
+		return result;
 	}
 	
-	
+	//댓글 삭제
+	public static int deleteComment(String c_idx) {
+		SqlSession ss = DBService.getFactory().openSession(true);
+		int result = ss.delete("BBS.c_delete", c_idx);
+		ss.close();
+		return result;
+	}
 }

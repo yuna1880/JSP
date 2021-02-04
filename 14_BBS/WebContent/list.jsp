@@ -53,7 +53,7 @@
 	// 4. 블록의 시작페이지, 끝페이지 구하기 (현재 페이지 번호 사용)
 	// 시작 페이지 구하기
 	int nowPage = p.getNowPage();
-	int beginPage = (nowPage - 1) / p.getPagePerBlock() * p.getPagePerBlock() + 1;
+	int beginPage = ((nowPage - 1) / p.getPagePerBlock()) * p.getPagePerBlock() + 1;
 	p.setBeginPage(beginPage);
 	// 마지막 페이지 구하기
 	p.setEndPage(p.getBeginPage() + p.getPagePerBlock()-1);

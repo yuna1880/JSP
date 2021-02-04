@@ -15,8 +15,14 @@
 	String b_idx = request.getParameter("b_idx");
 	String cPage = request.getParameter("cPage");
 
-	//1. 게시글 조회수 1 증가 (실습)
+	//1.게시글 조회수 1 증가 (실습)
+	//BBSVO vo = new BBSVO();
+	//String hit = Integer.toString(DAO.updateHit(b_idx));	
+	//vo.setHit(hit);
+	//System.out.println(">view hit : " + vo.getHit());
 	
+	DAO.updateHit(Integer.parseInt(b_idx));
+
 	//2. 게시글 (b_idx) 데이터 조회 //  후 화면 표시(나중에~)
 	BBSVO bvo = DAO.selectOne(b_idx);
 	System.out.println(">view bvo : " + bvo);
@@ -171,14 +177,14 @@ Comments
 <hr>
 <c:forEach var="commVO" items="${c_list }">
 <div class="comment">
-	<form action="ans_del.jsp" method="get">
-		<p>Name : ${commVO.writer }&nbsp; Date : ${comm.writer_date }</p>
+	<form action="ans_del.jsp" method="post">
+		<p>Name : ${commVO.writer }&nbsp; Date : ${commVO.write_date }</p>
 		<p>Comment : ${commVO.content }</p>
 		<!-- 삭제요청시, 암호 -->
 		<input type="submit" value="댓글삭제">
 		<!-- 바람직한 방법은 아닙니다. c_idx + pwd -> 삭제용도 -->
 		<input type="hidden" name="c_idx" value="${commVO.c_idx }">
-		<input type="hidden" name="password" value="${commVO.pwd }">
+		<input type="hidden" name="pwd" value="${commVO.pwd }">
 		<%-- 댓글 삭제 후 게시글 상세페이지로 이동시 b_idx--%>
 		<input type="hidden" name="b_idx" value="${commVO.b_idx }">
 	</form>

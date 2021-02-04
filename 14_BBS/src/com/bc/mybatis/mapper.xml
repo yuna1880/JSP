@@ -41,8 +41,30 @@
 	</insert>
 	<!-- 조회수 1 증가 처리 -->
 	<update id="hit" parameterType="int">
-	
+		UPDATE BBS_T
+			SET HIT = HIT + 1
+			WHERE B_IDX = #{b_idx}
 	</update>
+	
+	<!-- 게시글 수정 -->
+	<update id="update" parameterType="BBSVO">
+		UPDATE BBS_T
+			SET SUBJECT = #{subject},
+				WRITER = #{writer},
+				CONTENT = #{content},
+				FILE_NAME = #{file_name},
+				ORI_NAME = #{ori_name},
+				WRITE_DATE = SYSDATE,
+				IP = #{ip}
+			WHERE B_IDX = #{b_idx}
+			
+	</update>
+	
+	<!-- 게시글 삭제 -->
+	<delete id="delete" parameterType="string">
+		DELETE BBS_T WHERE B_IDX = #{b_idx}
+	</delete>
+	
 	<!-- ============ 댓글처리 ============= -->
 	<!-- 게시글에 딸린 댓글 조회  -->
 	<select id="commList" parameterType="string" 
@@ -55,9 +77,16 @@
 	
 	<!-- 댓글 입력 -->
 	<insert id="c_insert" parameterType="com.bc.mybatis.CommVO">
-	
-	
+		INSERT INTO COMMENT_T
+			(C_IDX, WRITER, CONTENT, PWD, WRITE_DATE, IP, B_IDX)
+		VALUES (BBS_T_SEQ.NEXTVAL, #{writer}, #{content}, #{pwd}, 
+					SYSDATE, #{ip}, #{b_idx})
 	</insert>
+	
+	<!-- 댓글 삭제 -->
+	<delete id="c_delete" parameterType="string">
+		DELETE FROM COMMENT_T WHERE C_IDX = #{c_idx}
+	</delete>
 	
 	
 </mapper>
