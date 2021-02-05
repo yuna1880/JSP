@@ -16,6 +16,15 @@
 		frm.action = "dept";
 		frm.submit();
 	}
+	function fullname_search(frm){
+		//alert('~~');
+		frm.action = "fullname";
+		frm.submit();
+	}
+	function search_go(frm) {
+		frm.action = "search";
+		frm.submit();
+	}
 </script>
 </head>
 <body>
@@ -23,8 +32,11 @@
 	<form method="get">
 		<input type="button" value="전체보기" onclick="all_search(this.form)">
 		<input type="button" value="부서 코드 검색" onclick="dept_search(this.form)">
-		<input type="button" value="성명 검색 (성, 이름 포함)">
-		<input type="button" value="동적 검색">
+		<input type="button" value="성명 검색 (성, 이름 포함)" onclick="fullname_search(this.form)">
+		<input type="button" value="동적 검색" onclick="search_go(this.form)">
 	</form>
+<script>
+	
+</script>
 </body>
 </html>

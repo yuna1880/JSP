@@ -5,10 +5,10 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Dept로 검색한 직원 목록</title>
+<title>부서 직원 목록</title>
 </head>
 <body>
-	<h1>dept로 검색한 직원 목록</h1>
+	<h1>부서번호로 검색한 직원 목록</h1>
 	<h3>사번, 성명, 직종, 부서코드</h3>
 	<ul>
 		<c:forEach var="vo" items="${list }">

@@ -13,6 +13,52 @@
 			resultType="com.bc.model.vo.EmployeeVO">
 		SELECT * FROM EMPLOYEES
 			WHERE DEPARTMENT_ID = #{deptno}
+			ORDER BY EMPLOYEE_ID
+	</select>
+	
+	<!-- 이름으로 검색 -->
+	<select id="fullnameList" parameterType="string"
+				resultType="com.bc.model.vo.EmployeeVO">
+		SELECT * 
+			FROM employees
+		WHERE FIRST_NAME = INITCAP(#{fullname}) 
+			OR LAST_NAME = INITCAP(#{fullname})
+		ORDER BY EMPLOYEE_ID
+	</select>
+	
+	<!-- 동적 검색 -->
+	<select id="search" parameterType="map" 
+			resultType="com.bc.model.vo.EmployeeVO">
+		SELECT *
+    	FROM EMPLOYEES
+    	<choose>
+    		<when test="idx == 0">
+    			WHERE EMPLOYEE_ID = #{keyword}
+    		</when>
+    		<when test="idx == 1">
+    			WHERE FIRST_NAME = INITCAP(#{keyword}) 
+					OR LAST_NAME = INITCAP(#{keyword})
+    		</when>
+    		<when test="idx == 2">
+    			WHERE JOB_ID = UPPER(#{keyword})
+    		</when>
+    		<when test="idx == 3">
+    			WHERE DEPARTMENT_ID = #{keyword}
+    		</when>
+    	<otherwise>
+    		WHERE 1 = 2 <!-- FALSE 라는 뜻! 아무것도 안나온다. -->
+    	</otherwise>
+    	</choose>
+		ORDER BY EMPLOYEE_ID
+	</select>	
+	
+	
+	<!-- (*) 부서 번호(코드) 찾기  (민호님)-->
+	<select id="deptIdList" resultType="string">
+		SELECT DISTINCT DEPARTMENT_ID
+		FROM EMPLOYEES
+		WHERE DEPARTMENT_ID IS NOT NULL
+		ORDER BY DEPARTMENT_ID
 	</select>
 	
 	

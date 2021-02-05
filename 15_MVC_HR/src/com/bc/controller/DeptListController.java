@@ -20,7 +20,6 @@ public class DeptListController extends HttpServlet {
 		//전달받은 부서코드로 DB데이터 조회 후 deptList.jsp 응답처리 (위임처리)
 		//1. 전달받은 파라미터 값(부서코드 : deptno) 추출
 		String deptno = request.getParameter("deptno");
-		System.out.println("deptno : " + deptno);
 		
 		//2. DB에서 해당 부서 (deptno)에 있는 직원 조회(DAO 사용)
 		List<EmployeeVO> list = DAO.getDeptList(deptno);
