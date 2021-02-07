@@ -1,0 +1,7 @@
+INDEX VERSION 1.131
+/Users/yuna/Desktop/mystudy/60_Web/JSP/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/1944434234.index
+/14_BBS_clone/src
+/Users/yuna/Desktop/mystudy/60_Web/JSP/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/1140603835.index
+/15_MVC_HR/src
+/Users/yuna/Desktop/mystudy/60_Web/JSP/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/3710865692.index
+/14_BBS/src
