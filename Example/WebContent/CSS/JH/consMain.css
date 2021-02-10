@@ -1,0 +1,262 @@
+@charset "UTF-8";
+/*-------------- 폰트입당 --------------*/
+@import url(//fonts.googleapis.com/earlyaccess/nanumpenscript.css);
+
+@import url(//fonts.googleapis.com/earlyaccess/hanna.css);
+
+html {
+	scroll-behavior: smooth; /* 부드럽게 */
+}
+
+/*-------------- 헤더 입니당 --------------*/
+#main_title {
+	width: 85px;
+	cursor: pointer;
+}
+
+.categoryStore:hover{
+	cursor: pointer;
+}
+
+/*-------------- 메뉴 입니당 --------------*/
+.mLeft {
+	background-image: url('../../IMG_JH/left.png');
+	background-color: white;
+	background-size: 20px;
+	background-repeat: no-repeat;
+	border-radius: 70%;
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	top: 47%;
+	left: -20px;
+	box-shadow: 0px 0px 0.5px 1.5px #f4f4f4;
+	background-position: center;
+	visibility: hidden;
+}
+
+.mRight {
+	background-image: url('../../IMG_JH/right.png');
+	background-color: white;
+	background-size: 20px;
+	background-repeat: no-repeat;
+	border-radius: 70%;
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	top: 47%;
+	right: -20px;
+	box-shadow: 0px 0px 0.5px 1.5px #f4f4f4;
+	background-position: center;
+	visibility: hidden;
+}
+
+.mLeft:hover {
+	cursor: pointer;
+	background-color: #ff2200;
+	filter: invert(100%);
+	box-shadow: 0px 0px;
+}
+
+.mRight:hover {
+	cursor: pointer;
+	background-color: #ff2200;
+	filter: invert(100%);
+	box-shadow: 0px 0px;
+}
+
+#consMenu {
+	margin-left: 10%;
+	margin-right: 10%;
+	position: relative;
+}
+
+#consArea {
+	width: 100px;
+	padding: 3px;
+	background-color: #0080c0;
+	color: white;
+	border-radius: 3px;
+}
+
+#category {
+	padding-top: 10px;
+	overflow-x: scroll;
+	white-space: nowrap;
+	overflow: hidden;
+	padding-top: 10px;
+}
+
+.category {
+	display: inline-block;
+	text-align: center;
+	padding: 0px 20px 0px 0px;
+}
+
+.category:hover {
+	cursor: pointer;
+}
+
+IMG {
+	border-radius: 70%;
+	overflow: hidden;
+}
+
+.comImg {
+	vertical-align: top;
+	width: 100px;
+	height: 100px;
+	border-radius: 10%;
+	display: inline-block;
+}
+
+/*-------------- 본문 입니당 --------------*/
+#comList, .btnCons:hover {
+	cursor: pointer;
+}
+
+.btnCons {
+	border-radius: 6%;
+	padding: 10px 0px;
+}
+
+#comList {
+	width: 90%;
+	padding-left: 10%;
+	margin: 50px 0px;
+	display: inline-block;
+}
+
+.comNo {
+	visibility: hidden;
+}
+
+.comList:hover {
+	background-color: #f9ffff;
+}
+
+.comname {
+	font-size: 20px;
+	font-family: 'Hanna', sans-serif;
+	margin-bottom: 10px;
+	padding-top: 5px;
+}
+
+.comInfoImdang {
+	display: inline-block;
+	padding-left: 10px;
+}
+
+.comList {
+	position: relative;
+	margin-bottom: 30px;
+	padding-bottom: 10px;
+}
+
+.btnCons:hover {
+	background-color: #f2f2f2;
+	text-decoration: none;
+}
+
+.cominfo {
+	padding: 8px 0px;
+}
+
+#ex {
+	font-family: 'Nanum Pen Script', cursive;
+	font-size: 30px;
+	width: 80%;
+	height: 500px;
+	padding-left: 20%;
+	text-align: center;
+}
+
+.ex {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	visibility:
+}
+
+/*---------------------------------------- */
+.center {
+	text-align: center;
+}
+
+ul.pagination {
+	list-style-type: none
+}
+
+ul.pagination li {
+	display: inline-block;
+}
+
+ul.pagination a {
+	color: black;
+	float: left;
+	padding: 4px 8px;
+	text-decoration: none;
+	transition: background-color .3s;
+	/* border: 1px solid #ddd; */
+	/* margin: 0 4px; */
+	margin: 0px;
+}
+
+ul.pagination a.active {
+	background-color: #4CAF50;
+	color: white;
+	border: 1px solid #4CAF50;
+}
+
+/*-------------------------------- 반응형 --------------------------------*/
+@media only screen and (min-width: 1160px) {
+	.comList {
+		display: inline-block;
+		width: 50%;
+	}
+	.btnCons {
+		border-radius: 6%;
+		padding: 10px 0px;
+		text-align: center;
+		width: 80px;
+		top: 10px;
+		right: 20px;
+		position: absolute
+	}
+}
+
+@media only screen and (max-width: 1160px) {
+	.comList {
+		display: inline-block;
+		width: 100%;
+		margin-right: 0px;
+	}
+	.btnCons {
+		border-radius: 6%;
+		padding: 10px 0px;
+		text-align: center;
+		width: 80px;
+		top: 10px;
+		right: 5px;
+		position: absolute
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.comList {
+		text-align: center;
+	}
+	.comList>IMG {
+		width: 100%;
+		height: 400px;
+		display: block;
+	}
+	.btnCons {
+		display: inline-block;
+		position: relative;
+	}
+	.comInfoImdang {
+		text-align: -webkit-center;
+	}
+}

@@ -1,0 +1,278 @@
+@charset "UTF-8";
+
+html, body {
+	font-size: 15px;
+}
+
+/*----------- 헤더입니다 -----------*/
+#cons_header {
+	display: block;
+	width: 30%;
+	padding: 40px 20px 0;
+	margin: 0 auto 10px;
+}
+
+.cons_header {
+	width: 170px;
+}
+
+.cons_header:hover {
+	cursor: pointer;
+}
+
+#cons_title {
+	font-family: 'Jua', sans-serif;
+	font-size: 40px;
+	display: inline-block;
+	padding-left: 3px;
+}
+
+#cons_logo {
+	background-image: url('../../IMG_JH/logo.png');
+	background-color: white;
+	background-size: 40px;
+	background-repeat: no-repeat;
+	width: 40px;
+	height: 40px;
+	background-position: center;
+	display: inline-block;
+	vertical-align: text-bottom;
+}
+
+#cons_logo:hover {
+	cursor: pointer;
+}
+
+#cons_title:hover {
+	cursor: pointer;
+}
+
+/*----------- 본문 헤더 -----------*/
+#cons_section_header {
+	padding-bottom: 30px;
+}
+
+#cons_section {
+	display: block;
+	width: 40%;
+	padding: 30px 40px;
+	margin: 0 auto;
+	vertical-align: middle;
+}
+
+.consultation-form__header__title {
+	width: auto;
+	position: relative;
+	padding: 5px 0 5px 0px;
+	font-weight: 700;
+	font-size: 22px;
+	line-height: 30px;
+	color: #000;
+	word-break: break-all;
+	font-family: "Noto Sans KR", "Apple SD Gothic Neo", "맑은 고딕",
+		"Malgun Gothic", sans-serif;
+	-webkit-font-smoothing: antialiased;
+	letter-spacing: -0.4px;
+}
+
+.consultation-form__header__title img {
+	vertical-align: middle;
+}
+
+.cateEx, .ccategory {
+	margin-bottom: 10px;
+}
+
+.ccategory:hover {
+	color: white;
+	background-color: skyblue;
+	border-color: skyblue;
+}
+
+.cateEx {
+	color: #979797;
+	font-size: 13px;
+	font-weight: bold;
+}
+
+.ccategory {
+	border: 1px solid #bebebe;
+	border-radius: 30px;
+	width: 80px;
+	height: 35px;
+	text-align: center;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.ccategory>div {
+	position: relative;
+}
+
+/*---------- 본문 업체INFO ----------*/
+#cons_section_comInfo {
+	padding: 0px 0 30px;
+}
+
+/*---------- 본문 시공지역 ----------*/
+.areaEx {
+	font-weight: bold;
+}
+
+#consArea {
+	text-align: center;
+	width: 100px;
+	height: 30px;
+	padding-left: 30px;
+	border-radius: 5px;
+	margin-top: 10px;
+	border: 1px solid #bebebe;
+}
+
+/*---------- 본문 유저정보 ----------*/
+#cons_section_userInfo {
+	font-weight: bold;
+}
+
+.userNameInfo {
+	padding: 0px 0px 5px 0px;
+}
+
+.userNameInput {
+	width: 92.8%;
+	height: 30px;
+	border: 1px solid #bebebe;
+	border-radius: 5px;
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+.userNameInput:focus, .ctel:focus{
+	outline: 2px solid skyblue;
+}
+
+.userTelInfo {
+	padding: 20px 0 30px;
+}
+
+.userTelHint {
+	margin: 10px 0px 10px 0px;
+	padding-left: 10px;
+	font-size: 15px;
+	color: #00e1e1;
+	padding-left: 10px;
+}
+
+.ctel{
+	display: inline-block;
+	width: 92.8%;
+	height: 30px;
+	border-radius: 5px;
+	text-align: center;
+	margin-bottom: 10px;
+	overflow: hidden;
+	border: 1px solid #bebebe;
+}
+
+input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-inner-spin-button
+	{
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+/*------------------------ submit,cancel -----------------------*/
+.cancel:hover, .submit:hover {
+	color: white;
+	background-color: skyblue;
+	cursor: pointer;
+}
+
+.cancel:focus,.submit:focus {
+	outline: none
+}
+
+.submit {
+	display: inline-block;
+	background-color: white;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+	border: 1px solid skyblue;
+	margin-right: -4px;
+	width: 47%;
+	height: 50px;
+	color: skyblue;
+	background-color: white;
+	color: skyblue;
+}
+
+.cancel {
+	display: inline-block;
+	background-color: white;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	border: 1px solid skyblue;
+	margin-left: -3px;
+	width: 47%;
+	height: 50px;
+	color: skyblue;
+}
+
+/*------------------------ footer -----------------------*/
+footer#main_footer {
+	width: 100%;
+	background-color: rgb(250, 250, 250);
+	border-top: 1px solid rgb(200, 200, 200);
+}
+
+#main_footer_content {
+	width: 80%;
+	height: 200px;
+	margin: 50px auto;
+}
+
+#main_footer_icon {
+	font-size: 30px;
+	text-align: right;
+	color: #666;
+}
+
+#main_footer_content h1 {
+	font-weight: 900;
+	margin-top: 20px
+}
+
+#main_footer_h0 {
+	font-size: 13px;
+	color: #333
+}
+
+#main_footer_h1 {
+	font-size: 30px;
+	color: #333
+}
+
+#main_footer_h2 {
+	font-size: 13px;
+	color: #666
+}
+
+#main_footer_h3 {
+	font-size: 10px;
+	color: #333
+}
+
+#main_footer_h4 {
+	font-size: 10px;
+	color: #666
+}
+
+#main_footer_h5 {
+	font-size: 10px;
+	color: #666
+}
+
+#main_footer_h6 {
+	font-size: 10px;
+	color: #333;
+	padding-bottom: 30px
+}

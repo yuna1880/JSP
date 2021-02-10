@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="blog.naver.db.mapper">
+	<select id="list" resultType="blog.naver.db.VO">
+		select * from ajoin order by num 
+	</select>
+	
+	<select id="idchk" parameterType="String" resultType="blog.naver.db.VO">
+		select * from ajoin where id = #{id}
+	</select>
+	
+	<insert id="insert" parameterType="blog.naver.db.VO">
+		insert into ajoin values(#{num}, #{id}, #{pw},#{name},#{age},#{addr})
+	</insert>
+	
+	<delete id="delete" parameterType="String">
+		delete from ajoin where num = #{num}
+	</delete>
+</mapper>
+
+
+
+
+
+
+
+
+
